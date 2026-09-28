@@ -30,10 +30,6 @@
             Console.WriteLine("=====================================");
             Console.WriteLine($"Total Inventory Units: {totalUnits}");
             Console.WriteLine("=====================================");
-
-            Console.WriteLine();
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
             
             int restockThreshold = 16;
             var lowStockItems = items.Where(it => it.Quantity < restockThreshold).ToList();
@@ -52,7 +48,11 @@
                     Console.WriteLine($"- {item.Name} ({item.Category}): {item.Quantity} remaining");
                 }
             }
+            Console.WriteLine();
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
         }
+        
     }
 
     internal record FoodItem(int Id, string Name, string Category, int Quantity);
