@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace FoodBankInventory
+﻿namespace FoodBankInventory
 {
     internal class Program
     {
@@ -16,7 +13,7 @@ namespace FoodBankInventory
                 new FoodItem(105, "Tomato Soup", "Canned Food", 30)
             };
 
-            Console.WriteLine("=== COMMUNITY FOOD BANK INVENTORY ===");
+            Console.WriteLine("=== COMMUNITY FOOD BANK INVENTORY SYSTEM ===");
 
             foreach (var it in items)
             {
@@ -26,6 +23,13 @@ namespace FoodBankInventory
                 Console.WriteLine($"Category: {it.Category}");
                 Console.WriteLine($"Quantity: {it.Quantity}");
             }
+
+            int totalUnits = items.Sum(it => it.Quantity);
+
+            Console.WriteLine();
+            Console.WriteLine("=====================================");
+            Console.WriteLine($"Total Inventory Units: {totalUnits}");
+            Console.WriteLine("=====================================");
 
             Console.WriteLine();
             Console.WriteLine("Press any key to exit...");
