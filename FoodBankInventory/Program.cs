@@ -13,7 +13,7 @@
                 new FoodItem(105, "Tomato Soup", "Canned Food", 30)
             };
 
-            Console.WriteLine("=== COMMUNITY FOOD BANK INVENTORY SYSTEM ===");
+            Console.WriteLine("=== Test ===");
 
             foreach (var it in items)
             {
